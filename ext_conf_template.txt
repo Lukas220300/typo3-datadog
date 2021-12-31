@@ -1,0 +1,19 @@
+datadog {
+    # cat=config; type=string; label=DataDog API Key
+    apiKey = 1234567890abcdefghijklmnopqrstuvwxyz
+    # cat=config; type=string; label=DataDog API Url
+    apiUrl = https://http-intake.logs.datadoghq.eu/v1/input
+}
+
+configuration {
+    # cat=logging//1; type=options[DEBUG=7, INFO=6, NOTICE=5, WARNING=4, ERROR=3, CRITICAL=2, ALERT=1, EMERGENCY=0]; label=Loglevel: select the minimum loglevel.
+    loglevel = DEBUG
+    # cat=logging//2; type=boolean; label=FingersCrossed
+    fingersCrossed = 0
+    # cat=logging//3; type=options[DEBUG=7, INFO=6, NOTICE=5, WARNING=4, ERROR=3, CRITICAL=2, ALERT=1, EMERGENCY=0]; label=FingersCrossedLevel: select the minimum loglevel for fingers crossed.
+    fingersCrossedLevel = DEBUG
+    # cat=logging//4; type=options[FileWriter, DataDogWriter]; label=Writer: select a writer.
+    writer = FileWriter
+    # cat=logging//5; type=string; label=HOST
+    hostName = LOGGING
+}
